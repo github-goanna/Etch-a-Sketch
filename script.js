@@ -1,19 +1,24 @@
 const container = document.querySelector(".container")
 
-let dims = 100
-let array = dims*dims
+let containerDim = 600
+let gridBoxes = 200
 
-for (i=0; i<array; i++) {
-    grid = document.createElement("div")
-    container.appendChild(grid)
-    grid.setAttribute("class", "box")
-    grid.style.width = 400/dims+ 'px';
-    grid.style.height = 400/dims +'px';
+container.style.width = containerDim + 'px'
+container.style.height = containerDim + 'px'
+
+let arrayLength = gridBoxes*gridBoxes
+
+for (i=0; i<arrayLength; i++) {
+    gridBox = document.createElement("div")
+    container.appendChild(gridBox)
+    gridBox.setAttribute("class", "box")
+    gridBox.style.width = containerDim/gridBoxes+ 'px';
+    gridBox.style.height = containerDim/gridBoxes +'px';
     gridFader()
 }
 
 function gridFader(){
-        grid.addEventListener("mouseover", (event) => {
+        gridBox.addEventListener("mouseover", (event) => {
         event.target.style.backgroundColor = "purple";
         setTimeout(() => {
             event.target.style.backgroundColor="";

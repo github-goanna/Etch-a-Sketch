@@ -38,7 +38,9 @@ function gridFader() {
 
 
 inputButton.addEventListener("click", () => {
-    gridBoxes = prompt("How big do you want the grid to be?", 100);
+    input = prompt("How big do you want the grid to be?", 100)
+    if (input>100) {gridBoxes = 100}
+    else gridBoxes = input
     container.textContent = ''
     gridCreator()
 })

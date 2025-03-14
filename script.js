@@ -26,7 +26,7 @@ function gridCreator() {
 
 function gridFader() {
     gridBox.addEventListener("mouseover", (event) => {
-        event.target.style.backgroundColor = "purple";
+        event.target.style.backgroundColor = `rgb(${Math.random()*256},${Math.random()*256},${Math.random()*256})`;
         setTimeout(() => {
             event.target.style.backgroundColor = "";
         }, 500);

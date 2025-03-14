@@ -7,7 +7,7 @@ let containerDim = 600
 container.style.width = containerDim + 'px'
 container.style.height = containerDim + 'px'
 
-let gridBoxes = 5
+let gridBoxes = 7
 
 gridCreator()
 
@@ -18,7 +18,7 @@ function gridCreator() {
         gridBox = document.createElement("div")
         container.appendChild(gridBox)
         gridBox.setAttribute("class", "box")
-        gridBox.style.width = containerDim / gridBoxes + 'px';
+        gridBox.style.width = (containerDim / gridBoxes) -0.01 + 'px';
         gridBox.style.height = containerDim / gridBoxes + 'px';
         gridFader()
     }
